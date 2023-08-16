@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 11px;
+  font-rendering: optimizeLegibility;
+  overscroll-behavior-y: none;
+}
