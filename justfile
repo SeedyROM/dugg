@@ -9,10 +9,12 @@ coverage:
 build *FLAGS:
     go build -o bin/dugg -ldflags="-s -w" {{FLAGS}} ./cmd/dugg
 
-run *FLAGS:
-    npm run build
+build-web *FLAGS:
+    cd web && npm run build {{FLAGS}}
+
+run *FLAGS: build-web build
     go run ./cmd/dugg {{FLAGS}}
 
 dev *FLAGS:
-    npm run dev &
-    air
+    cd web && npm run dev &
+    air -- {{FLAGS}}

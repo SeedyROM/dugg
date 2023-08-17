@@ -15,7 +15,7 @@ type TemplateRenderer struct {
 
 func NewTemplateRenderer() *TemplateRenderer {
 	return &TemplateRenderer{
-		templates: template.Must(template.ParseGlob("views/*.html")),
+		templates: template.Must(template.ParseGlob("web/views/*.html")),
 	}
 }
 
